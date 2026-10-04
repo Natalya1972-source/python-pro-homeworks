@@ -1,0 +1,9 @@
+[PRODUCTS]
+Ведмедик;м'яка іграшка;500;10
+LEGO City;конструктор;1200;5
+Лялька;лялька;750;8
+
+[CUSTOMERS]
+Наталя;nataly@gmail.com
+Олександр;alex@gmail.com
+Олег;oleg@gmail.com
