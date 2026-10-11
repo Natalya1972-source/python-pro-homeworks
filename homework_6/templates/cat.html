@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Моллі та Паня{% endblock %}
+
+{% block content %}
+
+<h2>Наші коти</h2>
+
+<div class="cats-container">
+
+    <div class="cat-card">
+        <h3>{{ molly_name }}</h3>
+
+        <img src="{{ url_for('static', filename='images/molly.jpg') }}"
+             alt="Моллі">
+
+        <p>Вік: {{ molly_age }} років</p>
+        <p>Порода: {{ molly_breed }}</p>
+        <p>Вага: {{ molly_weight }}</p>
+
+        <p>
+            Моллі — велика мейн-кунка, лагідна, кумедна та дуже домашня.
+        </p>
+    </div>
+
+    <div class="cat-card">
+        <h3>{{ panya_name }}</h3>
+
+        <img src="{{ url_for('static', filename='images/panya.jpg') }}"
+             alt="Паня">
+
+        <p>Вік: {{ panya_age }} років</p>
+        <p>Порода: {{ panya_breed }}</p>
+        <p>Вага: {{ panya_weight }}</p>
+        <p>Улюблена їжа: {{ panya_food }}</p>
+
+        <p>
+            Паня — звичайна домашня кішка і дуже любить рибу.
+        </p>
+    </div>
+
+</div>
+
+<hr>
+
+<p>
+    Моллі та Паня — наші коти-переселенці зі Світлодарська
+    і частинка дому, яка залишилася з нами.
+</p>
+
+{% endblock %}
