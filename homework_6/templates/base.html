@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Коти-переселенці{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>Коти — вимушені переселенці з м. Світлодарськ</h1>
+
+    <nav>
+        <a href="/">Головна</a>
+        <a href="/cat">Моллі та Паня</a>
+        <a href="/about">Про проєкт</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+</body>
+</html>
