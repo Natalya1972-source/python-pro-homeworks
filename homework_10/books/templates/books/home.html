@@ -1,0 +1,91 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+Моя книжкова полиця
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+    <h1>
+        Ласкаво просимо до книжкового магазину
+    </h1>
+
+    <p>
+        Тут зібрані книги з економіки, фінансів,
+        психології, здорового харчування,
+        спорту та енергетики.
+    </p>
+
+    <a class="button"
+       href="{% url 'book_list' %}">
+        Переглянути всі книги
+    </a>
+
+</div>
+
+
+<h2>Категорії</h2>
+
+<div class="grid">
+
+    {% for category in categories %}
+
+        <a
+            class="category-link"
+            href="{% url 'book_list' %}?category={{ category.slug }}"
+        >
+
+            <div class="card {% cycle 'terracotta' 'green' %}">
+
+                <h3>
+                    {{ category.name }}
+                </h3>
+
+                <p>
+                    Переглянути книги →
+                </p>
+
+            </div>
+
+        </a>
+
+    {% endfor %}
+
+</div>
+
+
+<h2 style="margin-top: 45px;">
+    Нові книги
+</h2>
+
+<div class="grid">
+
+    {% for book in books %}
+
+        <div class="card {% cycle 'green' 'terracotta' %}">
+
+            <h3>
+                {{ book.title }}
+            </h3>
+
+            <p>
+                {{ book.author }}
+            </p>
+
+            <p>
+                {{ book.category.name }}
+            </p>
+
+            <p class="price">
+                {{ book.price }} грн
+            </p>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

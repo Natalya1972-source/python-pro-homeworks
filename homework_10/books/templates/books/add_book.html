@@ -1,0 +1,29 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+Додати книгу
+{% endblock %}
+
+{% block content %}
+
+<div class="form-card">
+
+    <h1>
+        Додати книгу
+    </h1>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Зберегти книгу
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}

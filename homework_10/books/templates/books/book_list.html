@@ -1,0 +1,140 @@
+```html
+{% extends "books/base.html" %}
+
+{% block title %}
+Каталог книг
+{% endblock %}
+
+{% block content %}
+
+<h1>Каталог книг</h1>
+
+
+<!-- Пошук -->
+<form method="get" style="margin-bottom: 25px;">
+
+    <input
+        type="text"
+        name="q"
+        value="{{ query|default:'' }}"
+        placeholder="Пошук за назвою, автором..."
+        style="
+            padding: 12px;
+            width: 320px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+            margin-right: 8px;
+        "
+    >
+
+    <button
+        type="submit"
+        class="button"
+        style="border: none;"
+    >
+        🔍 Знайти
+    </button>
+
+</form>
+
+
+<!-- Категорії -->
+<div style="margin-bottom: 30px;">
+
+    <a
+        class="button"
+        href="{% url 'book_list' %}"
+        style="margin: 4px;"
+    >
+        Усі книги
+    </a>
+
+    {% for category in categories %}
+
+        <a
+            class="button"
+            href="{% url 'book_list' %}?category={{ category.slug }}"
+            style="
+                background: {% cycle '#b97b63' '#8da884' %};
+                margin: 4px;
+            "
+        >
+            {{ category.name }}
+        </a>
+
+    {% endfor %}
+
+</div>
+
+
+<!-- Картки книг -->
+<div class="grid">
+
+    {% for book in books %}
+
+        <div class="card {% cycle 'terracotta' 'green' %}">
+
+            <h2>
+                {{ book.title }}
+            </h2>
+
+            <p>
+                <strong>Автор:</strong>
+                {{ book.author }}
+            </p>
+
+            <p>
+                <strong>Категорія:</strong>
+                {{ book.category.name }}
+            </p>
+
+            <p>
+                {{ book.description }}
+            </p>
+
+            <p class="price">
+                {{ book.price }} грн
+            </p>
+
+            <p>
+                <strong>В наявності:</strong>
+                {{ book.stock }}
+            </p>
+
+            <a
+                class="button"
+                href="{% url 'book_detail' book.id %}"
+            >
+                Детальніше
+            </a>
+
+        </div>
+
+    {% empty %}
+
+        <div class="card green">
+
+            <h3>
+                Книг не знайдено
+            </h3>
+
+            <p>
+                Спробуйте змінити пошуковий запит
+                або вибрати іншу категорію.
+            </p>
+
+            <a
+                class="button"
+                href="{% url 'book_list' %}"
+            >
+                Показати всі книги
+            </a>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
+```

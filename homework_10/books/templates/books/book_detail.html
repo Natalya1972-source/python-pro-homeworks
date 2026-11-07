@@ -1,0 +1,51 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+{{ book.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="card green"
+     style="
+        max-width: 750px;
+        margin: 30px auto;
+        padding: 40px;
+     ">
+
+    <h1>
+        {{ book.title }}
+    </h1>
+
+    <h3>
+        {{ book.author }}
+    </h3>
+
+    <p>
+        <strong>Категорія:</strong>
+        {{ book.category.name }}
+    </p>
+
+    <p style="font-size: 18px;">
+        {{ book.description }}
+    </p>
+
+    <p class="price">
+        {{ book.price }} грн
+    </p>
+
+    <p>
+        <strong>В наявності:</strong>
+        {{ book.stock }}
+    </p>
+
+    <a
+        class="button"
+        href="{% url 'book_list' %}"
+    >
+        ← Назад до каталогу
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Книжковий магазин{% endblock %}</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #faf7f3;
+            color: #3d3d3d;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #9b5d46;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #b46f54;
+        }
+
+        .container {
+            width: 85%;
+            margin: 35px auto;
+        }
+
+        .hero {
+            background: linear-gradient(
+                120deg,
+                #efd5c8,
+                #dce8d6
+            );
+            border-radius: 20px;
+            padding: 55px;
+            margin-bottom: 35px;
+        }
+
+        .hero h1 {
+            margin-top: 0;
+            font-size: 42px;
+            color: #754936;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-top: 12px;
+            background: #9d634d;
+            color: white;
+            text-decoration: none;
+            border-radius: 9px;
+        }
+
+        .button:hover {
+            background: #7f4d3b;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(240px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .card {
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .terracotta {
+            background: #f1d4c7;
+        }
+
+        .green {
+            background: #dfead9;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .category-link {
+            text-decoration: none;
+            color: #4b4b4b;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #8a513c;
+        }
+
+        .form-card {
+            max-width: 650px;
+            margin: auto;
+            padding: 35px;
+            background: #e3eddc;
+            border-radius: 18px;
+        }
+
+        .form-card input,
+        .form-card select,
+        .form-card textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #c2b5aa;
+            border-radius: 7px;
+        }
+
+        .form-card button {
+            background: #a8654e;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 25px;
+            background: #e2e9dd;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        📚 Моя книжкова полиця
+    </div>
+
+    <nav>
+        <a href="{% url 'home' %}">
+            Головна
+        </a>
+
+        <a href="{% url 'book_list' %}">
+            Каталог
+        </a>
+
+        <a href="{% url 'add_book' %}">
+            Додати книгу
+        </a>
+
+        <a href="/admin/">
+            Адмінка
+        </a>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+<footer>
+    Книжковий магазин • Django
+</footer>
+
+</body>
+</html>
