@@ -1,0 +1,41 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+Помилка сервера
+{% endblock %}
+
+{% block content %}
+
+<div
+    class="card green"
+    style="
+        max-width: 700px;
+        margin: 60px auto;
+        text-align: center;
+        padding: 45px;
+    "
+>
+
+    <h1 style="font-size: 72px;">
+        500
+    </h1>
+
+    <h2>
+        Сталася помилка сервера
+    </h2>
+
+    <p>
+        Спробуйте повернутися на головну сторінку
+        та повторити дію пізніше.
+    </p>
+
+    <a
+        class="button"
+        href="{% url 'books:home' %}"
+    >
+        ← Повернутися на головну
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+Статистика магазину
+{% endblock %}
+
+{% block content %}
+
+<h1>
+    Статистика книжкового магазину
+</h1>
+
+<div class="grid">
+
+    <div class="card terracotta">
+        <h2>
+            {{ total_books }}
+        </h2>
+
+        <p>
+            Книг у каталозі
+        </p>
+    </div>
+
+
+    <div class="card green">
+        <h2>
+            {{ total_categories }}
+        </h2>
+
+        <p>
+            Категорій
+        </p>
+    </div>
+
+
+    <div class="card terracotta">
+        <h2>
+            {{ total_stock }}
+        </h2>
+
+        <p>
+            Книг у наявності
+        </p>
+    </div>
+
+
+    <div class="card green">
+        <h2>
+            {{ out_of_stock }}
+        </h2>
+
+        <p>
+            Немає в наявності
+        </p>
+    </div>
+
+</div>
+
+
+<a
+    class="button"
+    href="{% url 'books:home' %}"
+    style="margin-top: 30px;"
+>
+    ← На головну
+</a>
+
+{% endblock %}

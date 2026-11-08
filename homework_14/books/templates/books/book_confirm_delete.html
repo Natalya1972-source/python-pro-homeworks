@@ -1,0 +1,53 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+Видалити книгу
+{% endblock %}
+
+{% block content %}
+
+<div
+    class="card terracotta"
+    style="
+        max-width: 650px;
+        margin: 50px auto;
+        text-align: center;
+        padding: 40px;
+    "
+>
+
+    <h1>
+        Видалити книгу?
+    </h1>
+
+    <h2>
+        {{ object.title }}
+    </h2>
+
+    <p>
+        Ви справді хочете видалити цю книгу?
+    </p>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <button
+            type="submit"
+            class="button"
+        >
+            Так, видалити
+        </button>
+
+    </form>
+
+    <a
+        class="button"
+        href="{% url 'books:book_detail' object.pk %}"
+    >
+        Ні, повернутися
+    </a>
+
+</div>
+
+{% endblock %}
