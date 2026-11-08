@@ -1,0 +1,418 @@
+[
+{
+  "model": "books.category",
+  "pk": 1,
+  "fields": {
+    "name": "Програмування",
+    "slug": "programuvannya"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 2,
+  "fields": {
+    "name": "Художня література",
+    "slug": "fiction"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 3,
+  "fields": {
+    "name": "Економіка",
+    "slug": "economics"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 4,
+  "fields": {
+    "name": "Фінанси і кредит",
+    "slug": "finance-credit"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 5,
+  "fields": {
+    "name": "Аудит підприємств",
+    "slug": "business-audit"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 6,
+  "fields": {
+    "name": "Психологія",
+    "slug": "psychology"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 7,
+  "fields": {
+    "name": "Здорове схуднення після 50",
+    "slug": "healthy-weight-50-plus"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 8,
+  "fields": {
+    "name": "Спорт після 50",
+    "slug": "fitness-50-plus"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 9,
+  "fields": {
+    "name": "Правильне харчування",
+    "slug": "healthy-nutrition"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 10,
+  "fields": {
+    "name": "Енергетика",
+    "slug": "energy"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 1,
+  "fields": {
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "price": "1000.00",
+    "description": "Практичний посібник з вивчення Python.",
+    "stock": 5,
+    "category": 1
+  }
+},
+{
+  "model": "books.book",
+  "pk": 2,
+  "fields": {
+    "title": "Django for Beginners",
+    "author": "William Vincent",
+    "price": "950.00",
+    "description": "Книга для початківців з розробки вебзастосунків на Django.",
+    "stock": 5,
+    "category": 1
+  }
+},
+{
+  "model": "books.book",
+  "pk": 3,
+  "fields": {
+    "title": "Майстер і Маргарита",
+    "author": "Михайло Булгаков",
+    "price": "500.00",
+    "description": "Художній роман.",
+    "stock": 8,
+    "category": 2
+  }
+},
+{
+  "model": "books.book",
+  "pk": 4,
+  "fields": {
+    "title": "Python для початківців",
+    "author": "Олександр",
+    "price": "700.00",
+    "description": "Навчальна книга з Python",
+    "stock": 5,
+    "category": 1
+  }
+},
+{
+  "model": "books.book",
+  "pk": 6,
+  "fields": {
+    "title": "Економіка підприємства",
+    "author": "Ірина Коваленко",
+    "price": "620.00",
+    "description": "Основи економіки та діяльності підприємства",
+    "stock": 7,
+    "category": 3
+  }
+},
+{
+  "model": "books.book",
+  "pk": 7,
+  "fields": {
+    "title": "Економічний аналіз на практиці",
+    "author": "Олександр Мельник",
+    "price": "740.00",
+    "description": "Методи аналізу показників підприємства",
+    "stock": 4,
+    "category": 3
+  }
+},
+{
+  "model": "books.book",
+  "pk": 8,
+  "fields": {
+    "title": "Планування та прогнозування",
+    "author": "Наталія Шевченко",
+    "price": "690.00",
+    "description": "Практичні підходи до планування",
+    "stock": 6,
+    "category": 3
+  }
+},
+{
+  "model": "books.book",
+  "pk": 9,
+  "fields": {
+    "title": "Фінанси підприємств",
+    "author": "Наталія Бондар",
+    "price": "680.00",
+    "description": "Управління фінансами підприємства",
+    "stock": 8,
+    "category": 4
+  }
+},
+{
+  "model": "books.book",
+  "pk": 10,
+  "fields": {
+    "title": "Кредитування та банківська справа",
+    "author": "Андрій Савченко",
+    "price": "790.00",
+    "description": "Основи кредитування та банківських операцій",
+    "stock": 5,
+    "category": 4
+  }
+},
+{
+  "model": "books.book",
+  "pk": 11,
+  "fields": {
+    "title": "Фінансове планування",
+    "author": "Олег Василенко",
+    "price": "720.00",
+    "description": "Бюджети, фінплани та контроль виконання",
+    "stock": 3,
+    "category": 4
+  }
+},
+{
+  "model": "books.book",
+  "pk": 12,
+  "fields": {
+    "title": "Аудит діяльності підприємства",
+    "author": "Марина Петренко",
+    "price": "720.00",
+    "description": "Основні процедури аудиту підприємств",
+    "stock": 6,
+    "category": 5
+  }
+},
+{
+  "model": "books.book",
+  "pk": 13,
+  "fields": {
+    "title": "Внутрішній контроль і аудит",
+    "author": "Сергій Ткаченко",
+    "price": "650.00",
+    "description": "Організація внутрішнього контролю",
+    "stock": 5,
+    "category": 5
+  }
+},
+{
+  "model": "books.book",
+  "pk": 14,
+  "fields": {
+    "title": "Практичний аудит звітності",
+    "author": "Олена Марчук",
+    "price": "780.00",
+    "description": "Перевірка фінансової звітності",
+    "stock": 2,
+    "category": 5
+  }
+},
+{
+  "model": "books.book",
+  "pk": 15,
+  "fields": {
+    "title": "Психологія спілкування",
+    "author": "Олена Кравченко",
+    "price": "490.00",
+    "description": "Як краще розуміти себе та інших",
+    "stock": 9,
+    "category": 6
+  }
+},
+{
+  "model": "books.book",
+  "pk": 16,
+  "fields": {
+    "title": "Керування емоціями та стресом",
+    "author": "Ірина Левченко",
+    "price": "540.00",
+    "description": "Практичні техніки роботи зі стресом",
+    "stock": 7,
+    "category": 6
+  }
+},
+{
+  "model": "books.book",
+  "pk": 17,
+  "fields": {
+    "title": "Впевненість у собі",
+    "author": "Анна Гринь",
+    "price": "460.00",
+    "description": "Розвиток упевненості та особистих меж",
+    "stock": 10,
+    "category": 6
+  }
+},
+{
+  "model": "books.book",
+  "pk": 18,
+  "fields": {
+    "title": "Здорові звички після 50",
+    "author": "Анна Мороз",
+    "price": "460.00",
+    "description": "Поступова зміна харчових звичок",
+    "stock": 8,
+    "category": 7
+  }
+},
+{
+  "model": "books.book",
+  "pk": 19,
+  "fields": {
+    "title": "Харчування та активність після 50",
+    "author": "Ольга Романенко",
+    "price": "520.00",
+    "description": "Поєднання раціону та рухової активності",
+    "stock": 6,
+    "category": 7
+  }
+},
+{
+  "model": "books.book",
+  "pk": 20,
+  "fields": {
+    "title": "Контроль ваги без жорстких дієт",
+    "author": "Світлана Коваль",
+    "price": "570.00",
+    "description": "Загальні принципи здорового контролю ваги",
+    "stock": 4,
+    "category": 7
+  }
+},
+{
+  "model": "books.book",
+  "pk": 21,
+  "fields": {
+    "title": "Рух і здоров’я після 50",
+    "author": "Віктор Данилюк",
+    "price": "480.00",
+    "description": "Базова фізична активність і рухливість",
+    "stock": 7,
+    "category": 8
+  }
+},
+{
+  "model": "books.book",
+  "pk": 22,
+  "fields": {
+    "title": "Безпечні тренування для дорослих",
+    "author": "Максим Олійник",
+    "price": "560.00",
+    "description": "Побудова помірних тренувань",
+    "stock": 5,
+    "category": 8
+  }
+},
+{
+  "model": "books.book",
+  "pk": 23,
+  "fields": {
+    "title": "Активне життя після 50",
+    "author": "Петро Левченко",
+    "price": "530.00",
+    "description": "Рух, відновлення та щоденна активність",
+    "stock": 0,
+    "category": 8
+  }
+},
+{
+  "model": "books.book",
+  "pk": 24,
+  "fields": {
+    "title": "Основи збалансованого харчування",
+    "author": "Катерина Марченко",
+    "price": "510.00",
+    "description": "Основні принципи збалансованого раціону",
+    "stock": 10,
+    "category": 9
+  }
+},
+{
+  "model": "books.book",
+  "pk": 25,
+  "fields": {
+    "title": "Здорова кухня на кожен день",
+    "author": "Людмила Гончар",
+    "price": "590.00",
+    "description": "Прості ідеї щоденного харчування",
+    "stock": 8,
+    "category": 9
+  }
+},
+{
+  "model": "books.book",
+  "pk": 26,
+  "fields": {
+    "title": "Корисне меню на тиждень",
+    "author": "Оксана Бойко",
+    "price": "550.00",
+    "description": "Приклади планування домашнього меню",
+    "stock": 6,
+    "category": 9
+  }
+},
+{
+  "model": "books.book",
+  "pk": 27,
+  "fields": {
+    "title": "Основи теплоенергетики",
+    "author": "Володимир Коваль",
+    "price": "850.00",
+    "description": "Основи виробництва теплової енергії",
+    "stock": 5,
+    "category": 10
+  }
+},
+{
+  "model": "books.book",
+  "pk": 28,
+  "fields": {
+    "title": "Теплові електростанції та обладнання",
+    "author": "Петро Бойко",
+    "price": "920.00",
+    "description": "Основне обладнання та робота ТЕС",
+    "stock": 3,
+    "category": 10
+  }
+},
+{
+  "model": "books.book",
+  "pk": 29,
+  "fields": {
+    "title": "Економіка та регулювання енергетики",
+    "author": "Олексій Черненко",
+    "price": "880.00",
+    "description": "Тарифи, витрати та економіка енергетики",
+    "stock": 4,
+    "category": 10
+  }
+}
+]
