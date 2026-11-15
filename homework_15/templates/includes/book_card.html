@@ -1,0 +1,47 @@
+<div class="card {% cycle 'terracotta' 'green' %}">
+
+    <h3>
+        {{ book.title }}
+    </h3>
+
+    <p>
+        <strong>Автор:</strong>
+        {{ book.author }}
+    </p>
+
+    <p>
+        <strong>Категорія:</strong>
+        {{ book.category.name }}
+    </p>
+
+    <p>
+        {{ book.description }}
+    </p>
+
+    <p class="price">
+        {{ book.price|floatformat:2 }} грн
+    </p>
+
+    {% if book.stock > 0 %}
+
+        <p>
+            <strong>В наявності:</strong>
+            {{ book.stock }}
+        </p>
+
+    {% else %}
+
+        <p>
+            <strong>Немає в наявності</strong>
+        </p>
+
+    {% endif %}
+
+    <a
+        class="button"
+        href="{% url 'books:book_detail' book.pk %}"
+    >
+        Детальніше
+    </a>
+
+</div>

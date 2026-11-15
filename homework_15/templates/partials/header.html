@@ -1,0 +1,29 @@
+<header>
+
+    <div class="logo">
+        📚 Моя книжкова полиця
+    </div>
+
+    <nav>
+        <a href="{% url 'books:home' %}">
+            Головна
+        </a>
+
+        <a href="{% url 'books:book_list' %}">
+            Каталог
+        </a>
+
+        <a href="{% url 'books:add_book' %}">
+            Додати книгу
+        </a>
+
+        <a href="{% url 'books:book_stats' %}">
+            Статистика
+        </a>
+
+        <a href="/admin/">
+            Адмінка
+        </a>
+    </nav>
+
+</header>

@@ -1,0 +1,41 @@
+{% extends "books/base.html" %}
+
+{% block title %}
+Сторінку не знайдено
+{% endblock %}
+
+{% block content %}
+
+<div
+    class="card terracotta"
+    style="
+        max-width: 700px;
+        margin: 60px auto;
+        text-align: center;
+        padding: 45px;
+    "
+>
+
+    <h1 style="font-size: 72px;">
+        404
+    </h1>
+
+    <h2>
+        Сторінку не знайдено
+    </h2>
+
+    <p>
+        Можливо, адреса введена неправильно
+        або сторінку було переміщено.
+    </p>
+
+    <a
+        class="button"
+        href="{% url 'books:home' %}"
+    >
+        ← Повернутися на головну
+    </a>
+
+</div>
+
+{% endblock %}
