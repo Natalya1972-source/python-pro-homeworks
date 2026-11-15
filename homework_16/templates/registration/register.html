@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Реєстрація
+{% endblock %}
+
+{% block content %}
+
+<div class="form-card">
+
+    <h1>
+        Реєстрація
+    </h1>
+
+    <p>
+        Створіть обліковий запис
+        у книжковому магазині.
+    </p>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Зареєструватися
+        </button>
+
+    </form>
+
+    <p style="margin-top: 20px;">
+        Уже маєте обліковий запис?
+    </p>
+
+    <a
+        class="button"
+        href="{% url 'login' %}"
+    >
+        Увійти
+    </a>
+
+</div>
+
+{% endblock %}
