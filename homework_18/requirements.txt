@@ -1,0 +1,4 @@
+Django==6.1.2
+django-debug-toolbar==8.0.0
+psycopg[binary]==3.2.13
+redis==7.0.1
